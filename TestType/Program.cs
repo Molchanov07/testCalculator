@@ -8,7 +8,11 @@ namespace TestType
 {
     class Program
     {
-        static void Main(string[] args)         {
-      
+        static void Main(string[] args)
+        {
+            //Создать калькулятор который для двух чисел выводит сумму, разность, деление, умножение в консоль с новой строки.
+            Console.Write ( "Sum: " +"4"); 
+            Console.ReadLine(); 
+        }
     }
 }
