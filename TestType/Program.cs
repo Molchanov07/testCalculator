@@ -11,7 +11,20 @@ namespace TestType
         static void Main(string[] args)
         {
             //Создать калькулятор который для двух чисел выводит сумму, разность, деление, умножение в консоль с новой строки.
-            Console.Write ( "Sum: " +"4"); 
+            double a = 3, b = 4, c;  
+            
+            Console.WriteLine("Введи число");
+            Console.WriteLine("Введи знак");
+            Console.WriteLine("+");
+            Console.WriteLine("-");
+            Console.WriteLine("*");
+            Console.WriteLine("/");
+            c = a + b;
+
+            Console.WriteLine("Введи число");
+            Console.Write("Sum:" + c);
+d            Console.WriteLine ("Raz:" + (a - b));  
+            
             Console.ReadLine(); 
         }
     }
