@@ -10,15 +10,21 @@ namespace TestType
     {
         static void Main(string[] args)
         {
-            //Создать калькулятор который для двух чисел выводит сумму, разность, деление, умножение в консоль с новой строки.
+       
             double a = 3, b = 4, c;  
             
             
             c = a + b;
-
-            Console.Write("Sum:" + c);
-            Console.WriteLine ("Raz:" + (a - b));  
-            
+            Console.WriteLine("Введите первое число");
+            string num1 = Console.ReadLine();
+            double.TryParse(num1, out a);
+            Console.WriteLine("Введите второе число");
+            string num2 = Console.ReadLine();
+            double.TryParse(num2, out b);
+            Console.WriteLine("Sum "+(a + b)) ;
+            Console.WriteLine("Raz "+(a - b));
+            Console.WriteLine("Umn "+(a * b));
+            Console.WriteLine("Del "+ (a / b));
             Console.ReadLine(); 
         }
     }
