@@ -15,10 +15,8 @@ namespace TestType
             
             Console.WriteLine("Введи число");
             Console.WriteLine("Введи знак");
-            Console.WriteLine("+");
-            Console.WriteLine("-");
-            Console.WriteLine("*");
-            Console.WriteLine("/");
+           
+            
             c = a + b;
 
             Console.WriteLine("Введи число");
