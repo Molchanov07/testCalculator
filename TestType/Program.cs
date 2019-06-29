@@ -10,11 +10,15 @@ namespace TestType
     {
         static void Main(string[] args)
         {
-       
-            double a = 3, b = 4, c;  
+
+            double a = 3, b = 4; 
             
             
-            c = a + b;
+            
+            Console.WriteLine("Привет");
+            Console.WriteLine("Как тебя зовут?");
+            string answer=Console.ReadLine();
+            Console.WriteLine("Добро пожаловать в мою таверну, "+answer) ;
             Console.WriteLine("Введите первое число");
             string num1 = Console.ReadLine();
             double.TryParse(num1, out a);
