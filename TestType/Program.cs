@@ -8,27 +8,45 @@ namespace TestType
 {
     class Program
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
 
-            double a = 3, b = 4; 
-            
-            
-            
+            double a = 3, b = 4;
+
+           
+
             Console.WriteLine("Привет");
             Console.WriteLine("Как тебя зовут?");
             string answer=Console.ReadLine();
             Console.WriteLine("Добро пожаловать в мою таверну, "+answer) ;
+            Console.WriteLine("Что вы хотите выполнить?(Сложение(+),вычитание(-), умножение(*), деление(/).");
+            string operation = Console.ReadLine();
+            
             Console.WriteLine("Введите первое число");
-            string num1 = Console.ReadLine();
-            double.TryParse(num1, out a);
+            string num = Console.ReadLine();
+            double.TryParse(num, out a);
             Console.WriteLine("Введите второе число");
-            string num2 = Console.ReadLine();
-            double.TryParse(num2, out b);
-            Console.WriteLine("Sum "+(a + b)) ;
-            Console.WriteLine("Raz "+(a - b));
-            Console.WriteLine("Umn "+(a * b));
-            Console.WriteLine("Del "+ (a / b));
+            num = Console.ReadLine();
+            double.TryParse(num, out b);
+            if ("+" == operation) {
+                Console.WriteLine("Sum " + (a + b));
+
+            }
+           else if ("-"== operation) { Console.WriteLine("Raz " + (a - b)); }
+          else  if ("*"==operation)
+            {
+                Console.WriteLine("Umn " + (a * b));
+            }
+           else if ("/"==operation)
+            {
+                Console.WriteLine("Del " + (a / b));
+            }
+
+            
             Console.ReadLine(); 
         }
     }
