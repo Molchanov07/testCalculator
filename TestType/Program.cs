@@ -28,11 +28,24 @@ namespace TestType
             }
             Console.WriteLine("Что вы хотите выполнить?(Сложение(+),вычитание(-), умножение(*), деление(/).");
             string operation = Console.ReadLine();
+            if (PrintErorMessage(operation, "Почему ты не ввел(а) знак?"))
+            {
+                return;
+            }
             Console.WriteLine("Введите первое число");
+            
             string num = Console.ReadLine();
+            if (PrintErorMessage(num, "Почему ты не ввел(а) число?"))
+            {
+                return;
+            }
             double.TryParse(num, out a);
             Console.WriteLine("Введите второе число");
             num = Console.ReadLine();
+            if (PrintErorMessage(num, "Почему ты не ввел(а) число?"))
+            {
+                return;
+            }
             double.TryParse(num, out b);
             if ("+" == operation)
             {
@@ -46,20 +59,28 @@ namespace TestType
             else if ("*" == operation)
             {
                 Console.WriteLine("Umn " + (a * b));
-            }      
+            }
             else if ("/" == operation)
             {
-                if (b == 0) { Console.WriteLine("Del " + (a / b)); }
-                ;
-                Console.WriteLine("Del " + (a / b));
-            
-                Console.WriteLine("Операция невозможна");
-            }
+                if (b == 0) { Console.WriteLine("Операция невозможна"); }
+                                                         
+                else { Console.WriteLine("Del " + (a / b));
+                }
 
+            }
 
             Console.ReadLine();
         }
+        public static bool PrintErorMessage(string operation,string text  )
+        {
+            if (string.IsNullOrEmpty(operation))
+            {
+                Console.WriteLine(text);
+                Console.WriteLine("Я не могу работать в таких условиях! Прощай, встретимся в таверне позже");
+                Console.ReadLine(); return true;
+                
+                
+            }else { return false; }
+        }
     }
 }
-// если ввожу имя Рома, или Юра- приветсвую создатель
-// если делим на 0 - вывести текст операция не выполняется
